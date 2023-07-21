@@ -1,0 +1,87 @@
+@font-face {
+    font-family: 'Get Schwifty';
+    src: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/3089507/get-schwifty.woff') format('woff');
+}
+
+.card {
+    width: 20rem;
+    height: 26rem;
+    margin: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-image: url('../../../public/portalback.jpg');
+    border-radius: 12px;
+    box-shadow: inset 5px 5px 10px #000000cb,
+                    inset -5px -5px 10px #3d3c3ce0;
+    box-shadow: 1rem greenyellow;
+}
+
+.images {
+    transition: all 0.6s cubic-bezier(0.23, 1, 0.320, 1);
+    max-width: 70%;
+    height: 130px;
+    margin-top: 0.3em;
+    aspect-ratio: 1;
+    border-radius: 30%;
+    background: #f2f2f3;
+    margin-bottom: 0.4em;
+    box-shadow: -5px -5px 8px #030101cb, 
+                    5px 5px 8px #494949c2;
+}
+.charName {
+    text-align: center;
+    text-decoration: none;
+    display: flex;
+    margin: -1rem;
+    font-weight:900;
+    font-size: 1.3em;
+    color: rgb(169, 226, 35);
+    text-shadow: 2px 2px 0 #000000, -1px -1px 0 #000000, 1px -1px 0 #000000, -1px 1px black ;
+    font-family: 'Get Schwifty', sans-serif;
+    
+}
+.cardInfo {
+    margin-top: -1rem;
+    text-align: center;
+    font-size: 1.1rem;
+    font-weight: 300;
+    background: black;
+    background-clip: border-box;
+    -webkit-background-clip: text;
+    font-family:Helvetica, sans-serif;
+    text-shadow: 0.5px .5px 0 #ffffff, -.5px -.5px 0 #ffffff, .5px -.5px 0 #ffffff, -.5px .5px rgb(255, 255, 255) ;
+}
+
+
+.button{
+    align-self: flex-end;
+    color: #000000;
+    font-size: larger;
+    font-weight: bolder;
+    text-decoration: none;
+    padding: .1em .5em;
+    background: linear-gradient(90deg, rgb(243, 52, 52) 0%, rgb(255, 0, 0) 100%);
+    border-radius: 0.2em;
+}
+
+.button:hover{
+    box-shadow: inset 3px 3px 3px #801e1e,
+            inset -3px -3px 3px #550606;
+}
+
+.buttonFav{
+    align-self: flex-start;
+    margin-top: -1.6rem;
+    font-weight: 600;
+    font-size: larger;
+    color: #ff0000;
+    text-decoration: none;
+    background: linear-gradient(90deg, rgb(3, 20, 27) 0%, rgbrgb(5, 12, 15)0%);
+    padding: .1em .5em;
+    border-radius: 0.7em;  
+}
+
+.buttonFav:hover{
+    background: #6b7285;
+}
