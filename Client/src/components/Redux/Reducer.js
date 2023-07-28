@@ -8,12 +8,15 @@ const initialState={
 const rootReducer=(state= initialState, action)=>{
     switch (action.type) {
         case ADD_FAV:
-            return { ...state, myFavorites: action.payload, allCharacters: action.payload };
+            return { ...state, myFavorites: action.payload, allCharacter: action.payload };
         
         case REMOVE_FAV:
-            return { ...state, myFavorites: action.payload };
+            return { ...state, myFavorites: action.payload, allCharacter: action.payload};
         
         case FILTER:
+            if(action.payload==='All'){
+                return{...state, myFavorites:state.allCharacter}
+            } else
             return{...state, myFavorites:state.allCharacter.filter((e)=>e.gender===action.payload)};
 
         case ORDER:
@@ -30,7 +33,7 @@ const rootReducer=(state= initialState, action)=>{
             };
     
         default:
-            return state;
+            return state
     }
 }
 

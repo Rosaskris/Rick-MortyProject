@@ -8,12 +8,9 @@ import { useState } from 'react';
 
 
 export default function Favorites(props){
-
-
     const dispatch= useDispatch();
     let myFavorites = useSelector(state => state.myFavorites);
     console.log(myFavorites)
-
 
     const[aux, setAux]=useState(false)
 
@@ -27,7 +24,7 @@ export default function Favorites(props){
     }
     const onCloseFav=(id)=>{
         dispatch(removeFav(id))
-     }
+    }
 
     return(
         <div>
@@ -42,6 +39,7 @@ export default function Favorites(props){
             <option value="Female">Female</option>
             <option value="Genderless">Genderless</option>
             <option value="unknown">unknown</option>
+            <option value="All">Show all</option>
         </select>
         </div>
 
