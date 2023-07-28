@@ -19,8 +19,6 @@ function App() {
    const [id, setId] = useState('');
    const [access, setAccess]= useState(false)
 
-   // const EMAIL='prueba@mail.com'
-   // const PASSWORD= 'pass123'
    const navigate= useNavigate()
 
    const login= async(userData)=>{
