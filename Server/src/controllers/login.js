@@ -1,12 +1,12 @@
-const {email, password}= require('../utils/user')
+const data= require('../utils/user')
 
 const login=(req,res)=>{
-    const {mail, pass}= req.query;
+    const {email, password}= req.query;
 
-    if (email===mail && password===pass){
+    if (email===data[0].mail && password===data[0].pass){
         return res.status(201).json({access:true})
-    } else{
-        return res.status(401).json({acess:false})
+    }else {
+        return res.status(401).json({access:false})
     }
 }
 
