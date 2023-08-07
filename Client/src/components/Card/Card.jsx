@@ -57,12 +57,7 @@ export default function Card(props) {
                <div className={styles.charName}><h2>{props.name}</h2></div>
                </Link>
             
-               <div className={styles.cardInfo}>
-               <h5>Status: {props.status}</h5>
-               <h5>Species: {props.species}</h5>
-               <h5>Gender: {props.gender}</h5>
-               <h5>Origin: {props.origin}</h5>
-            </div>
+
             <div>
             </div>
          

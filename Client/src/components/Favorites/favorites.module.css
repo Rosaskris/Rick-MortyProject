@@ -100,5 +100,182 @@
 .selectors{
     display: flex;
     justify-content: flex-end;
-    margin-top: -2rem;
+    margin-top: 5rem;
+}
+.order{
+    margin: 0.2rem;
+    font-size: 1rem;
+    padding: 0.25em 1em;
+    border: transparent;
+    box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24);
+    background: #000000;
+    border-radius: 1rem;
+    color:#c8ff00;
+    font-weight: 600;
+}
+
+.order:hover{
+    background: linear-gradient(90deg, #c8ff00 0%, #00ccff 100%);
+    cursor: pointer;
+    color: black;
+    font-weight: 600;
+}
+
+.aButton{
+    margin: 0.2rem;
+    font-size: 1rem;
+    padding: 0.25em 1em;
+    border: transparent;
+    box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24);
+    background: #000000;
+    border-radius: 1rem;
+    color:#c8ff00;
+    font-weight: 600;
+}
+
+.aButton:hover{
+    background: linear-gradient(90deg, #c8ff00 0%, #00ccff 100%);
+    cursor: pointer;
+    color: black;
+    font-weight: 600;
+}
+
+.dButton{
+    margin: 0.2rem;
+    font-size: 1rem;
+    padding: 0.25em 1em;
+    border: transparent;
+    box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24);
+    background: #000000;
+    border-radius: 1rem;
+    color:#c8ff00;
+    font-weight: 600;
+}
+
+.dButton:hover{
+    background: linear-gradient(90deg, #c8ff00 0%, #00ccff 100%);
+    cursor: pointer;
+    color: black;
+    font-weight: 600;
+}
+
+.filter{
+    margin: 0.2rem;
+    font-size: 1rem;
+    padding: 0.25em 1em;
+    border: transparent;
+    box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24);
+    background: #000000;
+    border-radius: 1rem;
+    color:#c8ff00;
+    font-weight: 600;
+}
+
+.filter:hover{
+    background: linear-gradient(90deg, #c8ff00 0%, #00ccff 100%);
+    cursor: pointer;
+    color: black;
+    font-weight: 600;
+}
+
+.male{
+    margin: 0.2rem;
+    font-size: 1rem;
+    padding: 0.25em 1em;
+    border: transparent;
+    box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24);
+    background: #000000;
+    border-radius: 1rem;
+    color:#c8ff00;
+    font-weight: 600;
+}
+
+.male:hover{
+    background: linear-gradient(90deg, #c8ff00 0%, #00ccff 100%);
+    cursor: pointer;
+    color: black;
+    font-weight: 600;
+}
+
+.female{
+    margin: 0.2rem;
+    font-size: 1rem;
+    padding: 0.25em 1em;
+    border: transparent;
+    box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24);
+    background: #000000;
+    border-radius: 1rem;
+    color:#c8ff00;
+    font-weight: 600;
+}
+
+.female:hover{
+    background: linear-gradient(90deg, #c8ff00 0%, #00ccff 100%);
+    cursor: pointer;
+    color: black;
+    font-weight: 600;
+}
+
+.genderless{
+    margin: 0.2rem;
+    font-size: 1rem;
+    padding: 0.25em 1em;
+    border: transparent;
+    box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24);
+    background: #000000;
+    border-radius: 1rem;
+    color:#c8ff00;
+    font-weight: 600;
+}
+
+.genderless:hover{
+    background: linear-gradient(90deg, #c8ff00 0%, #00ccff 100%);
+    cursor: pointer;
+    color: black;
+    font-weight: 600;
+}
+
+.unknown{
+    margin: 0.2rem;
+    font-size: 1rem;
+    padding: 0.25em 1em;
+    border: transparent;
+    box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24);
+    background: #000000;
+    border-radius: 1rem;
+    color:#c8ff00;
+    font-weight: 600;
+}
+
+.unknown:hover{
+    background: linear-gradient(90deg, #c8ff00 0%, #00ccff 100%);
+    cursor: pointer;
+    color: black;
+    font-weight: 600;
+}
+
+.all{
+    margin: 0.2rem;
+    font-size: 1rem;
+    padding: 0.25em 1em;
+    border: transparent;
+    box-shadow: 0 12px 16px 0 rgba(0, 0, 0, 0.24);
+    background: #000000;
+    border-radius: 1rem;
+    color:#c8ff00;
+    font-weight: 600;
+}
+
+.all:focus{
+    background: linear-gradient(90deg, #c8ff00 0%, #00ccff 100%);
+    cursor: pointer;
+    color: black;
+    font-weight: 600;
+}
+
+.error{
+    display: flex;
+    margin-top: 5rem;
+    color: rgb(108, 151, 44);
+    justify-content: center;
 }

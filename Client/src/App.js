@@ -31,7 +31,7 @@ function App() {
             access && navigate('/home');
          }
       catch (err){
-         window.alert(err)
+         window.alert('Contraseña Incorrecta')
       }
    }
 

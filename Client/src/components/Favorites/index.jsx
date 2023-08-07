@@ -10,7 +10,6 @@ import { useState } from 'react';
 export default function Favorites(props){
     const dispatch= useDispatch();
     let myFavorites = useSelector(state => state.myFavorites);
-    console.log(myFavorites)
 
     const[aux, setAux]=useState(false)
 
@@ -25,21 +24,21 @@ export default function Favorites(props){
     const onCloseFav=(id)=>{
         dispatch(removeFav(id))
     }
-
+    if(myFavorites.length){
     return(
         <div>
         <div className={styles.selectors}>
-        <select name='order' onChange={handleOrder}>
-            <option value="A">Ascendente</option>
-            <option value="D">Descendente</option>
+        <select name='order' onChange={handleOrder} className={styles.order}>
+            <option className={styles.aButton} value="A">Ascendente</option>
+            <option className={styles.dButton} value="D">Descendente</option>
         </select>
 
-        <select name="filter" onChange={handleFilter}>
-            <option value="Male">Male</option>
-            <option value="Female">Female</option>
-            <option value="Genderless">Genderless</option>
-            <option value="unknown">unknown</option>
-            <option value="All">Show all</option>
+        <select name="filter" onChange={handleFilter} className={styles.filter}>
+            <option value="Male" className={styles.male}>Male</option>
+            <option value="Female" className={styles.female}>Female</option>
+            <option value="Genderless" className={styles.genderless}>Genderless</option>
+            <option value="unknown" className={styles.unknown}>unknown</option>
+            <option value="All" className={styles.all}>Show all</option>
         </select>
         </div>
 
@@ -52,5 +51,29 @@ export default function Favorites(props){
         </div>
 
     )
+} else {
+    return(
+        <div>
+        <div className={styles.selectors}>
+        <select name='order' onChange={handleOrder} className={styles.order}>
+            <option className={styles.aButton} value="A">Ascendente</option>
+            <option className={styles.dButton} value="D">Descendente</option>
+        </select>
+
+        <select name="filter" onChange={handleFilter} className={styles.filter}>
+            <option value="Male" className={styles.male}>Male</option>
+            <option value="Female" className={styles.female}>Female</option>
+            <option value="Genderless" className={styles.genderless}>Genderless</option>
+            <option value="unknown" className={styles.unknown}>unknown</option>
+            <option value="All" className={styles.all}>Show all</option>
+        </select>
+        </div>
+
+        <div>
+            <h1 className={styles.error}>There are no favorites to display</h1>
+        </div>
+        </div>
+    )
+}
 }
 

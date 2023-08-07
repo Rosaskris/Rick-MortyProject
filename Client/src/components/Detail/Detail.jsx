@@ -61,7 +61,7 @@ useEffect(() => {
             {character.origin.name && <h2>Origin: {character.origin.name}</h2>}
 
         <Link to='/home'>
-        <button>Back Home</button>
+        <button className={styles.back}>Back Home</button>
         </Link>
             </div>
 
