@@ -2,6 +2,8 @@
     font-family: 'Get Schwifty';
     src: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/3089507/get-schwifty.woff') format('woff');
 }
+
+
 .main{
     font-family:'Get Schwifty', sans-serif;
     display: flex;
@@ -13,11 +15,17 @@
 }
 
 .warning{
+  margin-top: -2em;
     color: rgb(255, 1, 1);
+    font-size: small;
 }
 @media (max-width: 1500px){
 
-.loginBox{
+
+.loginBox {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -28,6 +36,8 @@
     box-sizing: border-box;
     box-shadow: 0 15px 25px rgba(0,0,0,.6);
     border-radius: 10px;
+    box-shadow: inset 3px 3px 8px #0000009f,
+    inset -3px -3px 8px #3d3c3ce0;
   }
   
   .emailBox{
@@ -57,13 +67,6 @@
     transition: .5s;
   }
   
-  /* .emailBoxInput:focus ~ emailBoxLabel,
-  .emailBoxInput:valid ~ emailBoxLabel {
-    top: -20px;
-    left: 0;
-    color: #bdb8b8;
-    font-size: 12px;
-  } */
   
 .buttonDiv{
     display: flex;
@@ -114,10 +117,40 @@
     height: 2px;
     background: linear-gradient(90deg, transparent, #03f40f);
     animation: btn-anim1 2s linear infinite;
-  }}
+  }
+
+  .passBox{
+    display: flex;
+    flex-direction: column;
+    margin-left: 0em;
+    width: 100%;
+  display: flex;
+  }
+
+  .eyeButton{
+    margin-left: 10em;
+    margin-top: -4.2em;
+    margin-bottom: 2.5em;
+    width: 100%;
+    z-index: 2;
+    background: none;
+    border-color: transparent;
+  }
+
+  .rickImage{
+    width: 50%;
+    border-radius: 7em;
+    justify-self: center;
+    box-shadow: 1px 1px 2px #000000b4;
+  }
+
+}
 
   @media (max-width: 600px){
     .loginBox{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
       position: absolute;
       top: 50%;
       left: 50%;
@@ -128,6 +161,8 @@
       box-sizing: border-box;
       box-shadow: 0 15px 25px rgba(0,0,0,.6);
       border-radius: 10px;
+      box-shadow: inset 3px 3px 8px #0000009f,
+      inset -3px -3px 8px #3d3c3ce0;
     }
     
     .emailBox{
@@ -214,4 +249,15 @@
       height: 2px;
       background: linear-gradient(90deg, transparent, #03f40f);
       animation: btn-anim1 2s linear infinite;
-    }}
+    }
+    .eyeButton{
+      margin-left: 5em;
+      margin-top: -4.2em;
+      margin-bottom: 2.5em;
+      width: 100%;
+      z-index: 2;
+      background: none;
+      border-color: transparent;
+    }
+  
+  }

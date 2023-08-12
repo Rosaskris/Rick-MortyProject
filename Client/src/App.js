@@ -31,7 +31,7 @@ function App() {
             access && navigate('/home');
          }
       catch (err){
-         window.alert('Contraseña Incorrecta')
+         window.alert('Wrong email or password')
       }
    }
 
@@ -52,7 +52,7 @@ function App() {
          
       }
    catch (err){
-         window.alert('¡No hay personajes con este ID!')
+         window.alert('There are no characters with this ID!')
       }
    }
    
@@ -67,8 +67,9 @@ function App() {
       axios.get(`http://localhost:3001/rickandmorty/character/${randomId}`)
    .then(({data}) => {
          if (!characters.some((char) => char.id === data.id)){
-         setCharacters((oldChars) => [...oldChars, data])}
-      
+         setCharacters((oldChars) => [...oldChars, data])} else{
+               window.alert('This character already exists')
+            }
    })
    }
 

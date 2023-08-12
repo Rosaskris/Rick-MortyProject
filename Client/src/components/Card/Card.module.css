@@ -7,7 +7,7 @@
 
 .card {
     width: 18rem;
-    height: 20rem;
+    height: 22rem;
     margin: 1.5rem;
     display: flex;
     flex-direction: column;
@@ -48,6 +48,16 @@
     text-shadow: 2px 2px 0 #000000, -1px -1px 0 #000000, 1px -1px 0 #000000, -1px 1px black ;
     font-family: 'Get Schwifty', sans-serif;
     
+}
+
+.charId{
+    padding-left: 1em;
+    padding-right: 1em;
+    background-color: #2691764d;
+    border-radius: 2em;
+    border-color: #000000;
+    font-size: 0.9em;
+    color: rgb(9, 15, 9);
 }
 
 .cardInfo {
@@ -96,10 +106,9 @@
 }}
 
 @media (max-width: 700px) {
-    /* Styles for smaller screens */
     .card {
         width: 15rem;
-        height: 17rem;
+        height: 18rem;
         margin: 1.5rem;
         display: flex;
         flex-direction: column;
@@ -109,10 +118,12 @@
         box-shadow: inset 5px 5px 10px #000000cb,
                         inset -5px -5px 10px #3d3c3ce0;
         box-shadow: 1rem greenyellow;
+        z-index: 1; 
     }
 
     .card:hover{
-        scale: 1.1;;
+        transform: scale(1.1);
+        z-index: 2; 
     }
     
     .images {
@@ -150,6 +161,16 @@
         font-family:Helvetica, sans-serif;
         text-shadow: 0.5px .5px 0 #ffffff, -.5px -.5px 0 #ffffff, .5px -.5px 0 #ffffff, -.5px .5px rgb(255, 255, 255) ;
     }
+
+    .charId{
+        padding-left: 1em;
+        padding-right: 1em;
+        background-color: #6b72858e;
+        border-radius: 2em;
+        border-color: #000000;
+        font-size: 0.5em;
+        color: rgb(9, 15, 9);
+    }
   }
 
 
@@ -157,7 +178,7 @@
     /* Styles for smaller screens */
     .card {
         width: 10rem;
-        height: 12rem;
+        height: 13rem;
         margin: 1.5rem;
         display: flex;
         flex-direction: column;
@@ -167,10 +188,12 @@
         box-shadow: inset 5px 5px 10px #000000cb,
                         inset -5px -5px 10px #3d3c3ce0;
         box-shadow: 1rem greenyellow;
+
     }
 
     .card:hover{
-        scale:1.1
+        scale:1.1;
+        z-index: 1;
     }
     
     .images {

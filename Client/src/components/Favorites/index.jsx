@@ -1,9 +1,9 @@
 import { useSelector } from 'react-redux';
 import Card from '../Card/Card';
 import styles from './favorites.module.css'
-import { orderCards,filterCards, removeFav } from '../Redux/action-type';
+import { orderCards,filterCards, removeFav, loadFavorites } from '../Redux/action-type';
 import { useDispatch } from 'react-redux';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 
 
 
@@ -24,6 +24,12 @@ export default function Favorites(props){
     const onCloseFav=(id)=>{
         dispatch(removeFav(id))
     }
+
+    useEffect(()=>{
+        dispatch(loadFavorites())
+    }, [dispatch])
+
+
     if(myFavorites.length){
     return(
         <div>

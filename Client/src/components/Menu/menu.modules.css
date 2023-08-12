@@ -4,6 +4,7 @@
     display: inline-block;
     color: white;
     text-decoration: none;
+    z-index: 3;
   }
   
   .summary {
@@ -22,6 +23,7 @@
 }
   .menu {
     position: absolute;
+    border-radius: 0.5em;
     top: 100%;
     left: 0;
     display: none;
@@ -33,6 +35,7 @@
   
   .details[open] .menu {
     display: block;
+    font-size: x-large;
   }
   
   .menu button {
@@ -42,10 +45,12 @@
     border: none;
     background-color: transparent;
     cursor: pointer;
+    font-size: 0.8em;
   }
   
   .menu button:hover {
-    background: rgb(255, 255, 255);
+    background: rgba(255, 255, 255, 0.568);
+    border-radius: 0.5em;
     cursor: pointer;
     color: rgb(0, 0, 0);
     font-weight: 500;

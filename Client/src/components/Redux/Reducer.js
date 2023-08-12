@@ -1,4 +1,4 @@
-import {ADD_FAV, FILTER, ORDER, REMOVE_FAV} from './action-type'
+import {ADD_FAV, FILTER, ORDER, REMOVE_FAV, LOAD_FAVS} from './action-type'
 
 const initialState={
     myFavorites:[],
@@ -7,6 +7,8 @@ const initialState={
 
 const rootReducer=(state= initialState, action)=>{
     switch (action.type) {
+        case LOAD_FAVS:
+            return{...state, myFavorites:action.payload}
         case ADD_FAV:
             return { ...state, myFavorites: action.payload, allCharacter: action.payload };
         

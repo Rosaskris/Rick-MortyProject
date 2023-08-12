@@ -54,9 +54,12 @@ export default function Card(props) {
                <img className= {styles.images} src={props.image} alt={props.name} /> 
                
                <Link to={`/detail/${props.id}`} style={{textDecoration:'none'}}>
-               <div className={styles.charName}><h2>{props.name}</h2></div>
+               <div className={styles.charName}>
+                  <h2>{props.name}</h2>
+                  </div>
                </Link>
-            
+
+               <div className={styles.charId}><h4>{props.id}</h4></div>
 
             <div>
             </div>

@@ -59,6 +59,8 @@ useEffect(() => {
             {character.species && <h2>Specie: {character.species}</h2>}
             {character.gender && <h2>Gender: {character.gender}</h2>}
             {character.origin.name && <h2>Origin: {character.origin.name}</h2>}
+            {character.id && <h2>ID: {character.id}</h2>}
+            
 
         <Link to='/home'>
         <button className={styles.back}>Back Home</button>

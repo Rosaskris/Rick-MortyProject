@@ -6,19 +6,19 @@ export default function validations(userData){
     const regexEmail = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i;
 
     if (!userData.email) {
-        errors.email = 'Se requiere un nombre';
+        errors.email = 'Name required';
 
     }if (!regexEmail.test(userData.email)) {
-        errors.email = 'Debe ser un correo electrónico';
+        errors.email = 'Must be a valid e-mail';
     } 
     if (userData.email.length>35) {
-        errors.email = 'El usuario no debe tener mas de 35 caracteres';}
+        errors.email = 'User cannot have more than 35 characters';}
 
     if (!userData.password.includes(1-0)) {
-        errors.password = 'Se requiere al menos un número';
+        errors.password = 'At least 1 number is required';
     }
     if (userData.password.length<6 || userData.password.length>10) {
-        errors.password = 'La contraseña debe tener entre 6 y 10 caracteres';}
+        errors.password = 'Password should have from 6 to 10 characters';}
 
     return errors;
 }
