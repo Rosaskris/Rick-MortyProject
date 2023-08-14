@@ -43,6 +43,8 @@ export default function Card(props) {
          });
       }, [myFavorites]);
 
+      
+
    return (
          <div id='card' className={styles.card}>
             <button id= 'botonDelete' className= {styles.button} onClick={()=>{props.onClose(props.id)}}>X</button>

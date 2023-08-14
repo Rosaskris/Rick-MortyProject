@@ -11,7 +11,7 @@ const UserModel= require('./models/User')
 // URL ----> postgres://DB_USER:DB_PASSWORD@DB_HOST/rickandmorty
 const sequelize = new Sequelize(
 `postgres://${DB_USER}:${DB_PASSWORD}@${DB_HOST}:5432/${DB_NAME}`,
-   { logging: false, native: false }
+   { logging: true, native: false }
 );
 
 // EJERCICIO 05
