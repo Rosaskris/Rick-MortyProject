@@ -15,7 +15,7 @@
     font-family: 'Get Schwifty';
     src: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/3089507/get-schwifty.woff') format('woff');
 }
-@media (max-width: 1500px){
+@media (max-width: 2500px){
 .card {
     padding-top: 1rem;
     margin-top: 0.5rem;
@@ -26,6 +26,7 @@
     justify-content: flex-start;
     flex-direction: row;
     align-items: center;
+    background-color: rgb(100, 255, 52);
     background-image: url('../../../public/portalback.jpg');
     border-radius: 12px;
     box-shadow: inset 5px 5px 10px #000000cb,

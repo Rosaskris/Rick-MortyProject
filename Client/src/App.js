@@ -11,6 +11,8 @@ import Error from './components/404/Error'
 import Form from './components/Form/Form';
 import {useNavigate} from 'react-router-dom'
 import Menu from './components/Menu';
+import { useDispatch } from 'react-redux';
+import { getUser } from './components/Redux/action-type';
 
 
 
@@ -18,7 +20,7 @@ function App() {
    const [characters, setCharacters]= useState([])
    const [id, setId] = useState('');
    const [access, setAccess]= useState(false)
-
+   const dispatch=useDispatch()
    const navigate= useNavigate()
 
    const login= async(userData)=>{
@@ -28,7 +30,10 @@ function App() {
          const {data}= await axios(URL + `?email=${email}&password=${password}`)
             const { access } = data;
             setAccess(access);
-            access && navigate('/home');
+            if(access){
+               dispatch(getUser(userData))
+               navigate('/home')
+            }
          }
       catch (err){
          window.alert('Wrong email or password')
@@ -36,6 +41,7 @@ function App() {
    }
 
    const logOut = () => {
+      dispatch(getUser(null))
       setAccess(false);
    }
 

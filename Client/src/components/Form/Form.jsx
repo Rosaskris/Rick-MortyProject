@@ -2,8 +2,10 @@ import { useState } from 'react'
 import styles from '../Form/Form.module.css'
 import validations from './validations'
 import rickGIF from './mortyeyes.png'
+import { useDispatch } from 'react-redux'
 
 export default function Form({login}){
+
     const [userData, setUserData]= useState({
         email:'',
         password:'',
@@ -40,6 +42,15 @@ export default function Form({login}){
         setPassShow(!passShow)
     }
 
+    const handleGuest=(e)=>{
+        e.preventDefault()
+        setUserData({
+        email:'gues@mail.com',
+        password:'guest123',
+        })
+        login(userData)
+    }
+
     return(
         <div  className={styles.loginBox}>
         <img className={styles.rickImage} src={rickGIF} alt="RickImage" />
@@ -48,7 +59,7 @@ export default function Form({login}){
 
             <div className={styles.emailBox}>
             <label htmlFor="email" className={styles.emailBoxLabel}></label>
-        <input required placeholder='Email' type="text" name="email" value={userData.email} onChange={handleChange} className={styles.emailBoxInput}  />
+        <input placeholder='Email' type="text" name="email" value={userData.email} onChange={handleChange} className={styles.emailBoxInput}  />
         {errors.email && <p className={styles.warning}>{errors.email}</p>}
             </div>
 
@@ -69,7 +80,10 @@ export default function Form({login}){
         <button type="submit" className={styles.buttonSubmit }>Submit</button>
         <span className={styles.spanButton}></span>
         </div>
+        <div>
 
+        <button className={styles.buttonSubmit } onClick={handleGuest}>Enter as guest</button>
+        </div>
 
     </form>
         </div>

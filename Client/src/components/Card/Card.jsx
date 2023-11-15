@@ -13,6 +13,7 @@ export default function Card(props) {
 
    const dispatch = useDispatch();
    const myFavorites = useSelector((state) => state.myFavorites);
+   let user = useSelector(state => state.user);
 
    const [isFav, setIsFav]= useState(false)
 
@@ -28,7 +29,8 @@ export default function Card(props) {
             species,
             origin,
             status,
-            gender
+            gender,
+            email: user.email
          }
          dispatch(addFav(data));
          setIsFav(true);

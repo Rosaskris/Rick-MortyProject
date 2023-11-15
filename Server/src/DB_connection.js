@@ -14,6 +14,8 @@ const sequelize = new Sequelize(
    { logging: true, native: false }
 );
 
+
+
 // EJERCICIO 05
 // Debajo de este comentario puedes ejecutar la función de los modelos.
    FavoriteModel(sequelize);
